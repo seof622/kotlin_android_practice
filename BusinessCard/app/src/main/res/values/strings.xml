@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BusinessCard</string>
+    <string name="top_full_name">Full Name</string>
+    <string name="top_title">Title</string>
+    <string name="call_number">+00 000 0000</string>
+    <string name="hash_tag">\@ath</string>
+    <string name="email">seof622@naver.com</string>
+</resources>
