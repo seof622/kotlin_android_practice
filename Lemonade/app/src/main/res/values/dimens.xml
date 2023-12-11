@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="button_corner_radius">30dp</dimen>
+    <dimen name="button_text_space">16dp</dimen>
+    <dimen name="image_padding">20dp</dimen>
+</resources>
