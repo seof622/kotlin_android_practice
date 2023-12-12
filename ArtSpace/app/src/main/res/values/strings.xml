@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ArtSpace</string>
+    <string name="first_art_title">The Last Supper</string>
+    <string name="second_art_title">Van Gogh Portrait</string>
+    <string name="third_art_title">Monna Lisa</string>
+    <string name="first_artist">Leonardo Da vinci</string>
+    <string name="second_artist">Van Gogh</string>
+    <string name="third_artist">Picasso</string>
+    <string name="first_art_year">1495</string>
+    <string name="second_art_year">1887</string>
+    <string name="third_art_year">1503</string>
+</resources>
