@@ -77,25 +77,26 @@ fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
             // 새롭게 Modifier를 정의해서 진행하면 Text를 싸는 Box에 대해서 align이 진행되어서 원하는대로 가로 정렬이 됨.
             modifier = Modifier
                 .padding(16.dp)
-                .align(alignment = Alignment.CenterHorizontally)
+                .align(alignment = Alignment.End)
         )
     }
 }
 
 /*
-- 이미지를 위한 Composable function
-- 이미지를 추가할 떄, nodpi value로 설정하여 import하는데 nodpi는 모든 밀도에 대한 리소스를 의미하고 현재 화면에
-관계없이 시스템에서 리소스 크기를 조정하지 않는다. (https://developer.android.com/training/multiscreen/screendensities?hl=ko#TaskUseDP)
- */
-@Composable
-fun GreetingImage(message: String, from: String, modifier: Modifier = Modifier) {
-    val image = painterResource(R.drawable.androidparty)
-    Box {
-        Image(
-            painter = image,
-            contentDescription = null, // 앱의 화면을 읽어주는 TalkBack 기능을 건너뛰게 해줌.
-            contentScale = ContentScale.Crop, // 이미지의 너비와 높이가 화면의 크기와 같거나 더 크도록 설정됨.
-            alpha = 0.5F // 배경 이미지의 불투명도 설정
+                    - 이미지를 위한 Composable function
+                    - 이미지를 추가할 떄, nodpi value로 설정하여 import하는데 nodpi는 모든 밀도에 대한 리소스를 의미하고 현재 화면에
+                    관계없이 시스템에서 리소스 크기를 조정하지 않는다. (https://developer.android.com/training/multiscreen/screendensities?hl=ko#TaskUseDP)
+                    */
+            @Composable
+            fun GreetingImage(message: String, from: String, modifier: Modifier = Modifier) {
+                val image = painterResource(R.drawable.androidparty)
+                val str1 = stringResource(R.string.my_name_is_th)
+                Box {
+                    Image(
+                        painter = image,
+                        contentDescription = null, // 앱의 화면을 읽어주는 TalkBack 기능을 건너뛰게 해줌.
+                        contentScale = ContentScale.Crop, // 이미지의 너비와 높이가 화면의 크기와 같거나 더 크도록 설정됨.
+            alpha = 2.0F // 배경 이미지의 불투명도 설정
         )
         GreetingText(
             message = message,
