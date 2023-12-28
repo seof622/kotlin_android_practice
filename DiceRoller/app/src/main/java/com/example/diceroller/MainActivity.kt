@@ -59,6 +59,10 @@ Modifier
 - 함수 호출 시 Modifier 값을 전달하는 이유는 composable이 재구성 할 수 있기 때문
 - 재구성이란 @Composable 메서드의 코드 블록이 다시 실행되는 것
 
+wrapContentSize
+- 사용 가능 공간을 하위 요소에 맞추도록 하고,
+- 사용 가능 공간이 하위 요소 보다 클 경우 매개변수로 alignment를 받아 정렬 가능
+
 remember
 - composable은 기본적으로는 stateless이다. -> 값을 보유하고 있지 않은, 시스템에서 언제든 재구성 할 수 있는 컴포넌트
 - composable 함수는 remember composable 을 사용하여 메모리에 객체를 저장함
@@ -79,7 +83,7 @@ fun DiceWithButtonAndImage(modifier: Modifier = Modifier) {
         else -> R.drawable.dice_6
     }
 
-    Column (
+    Column(
         modifier = modifier,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
