@@ -95,6 +95,7 @@ fun ReplyHomeScreen(
     if (navigationType == ReplyNavigationType.PERMANENT_NAVIGATION_DRAWER) {
         PermanentNavigationDrawer(
             drawerContent = {
+                val navigationDrawerContentDescription = stringResource(R.string.navigation_drawer)
                 PermanentDrawerSheet (Modifier.width(dimensionResource(id = R.dimen.drawer_width))) {
                     NavigationDrawerContent(
                         selectedDestination = replyUiState.currentMailbox,
@@ -105,6 +106,7 @@ fun ReplyHomeScreen(
                             .fillMaxHeight()
                             .background(MaterialTheme.colorScheme.inverseOnSurface)
                             .padding(dimensionResource(R.dimen.drawer_padding_content))
+                            .testTag(navigationDrawerContentDescription)
                     )
                 }
             }
@@ -195,6 +197,7 @@ private fun ReplyAppContent(
                         navigationItemContentList = navigationItemContentList,
                         modifier = Modifier
                             .fillMaxWidth()
+                            .testTag(bottomNavigationContentDescription)
                     )
                 }
             }
