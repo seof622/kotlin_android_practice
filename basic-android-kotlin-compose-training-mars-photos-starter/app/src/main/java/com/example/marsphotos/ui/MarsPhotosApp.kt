@@ -49,9 +49,13 @@ fun MarsPhotosApp() {
                 .fillMaxSize()
                 .padding(it)
         ) {
-            val marsViewModel: MarsViewModel = viewModel()
+            // viewModel() 이면 가장 가까운 ViewModelStoreOwner 에서 viewModel을 가져온다.
+
+            val marsViewModel: MarsViewModel = viewModel(factory = MarsViewModel.Factory)
             HomeScreen(
-                marsUiState = marsViewModel.marsUiState)
+                marsUiState = marsViewModel.marsUiState,
+                retryAction = marsViewModel::getMarsPhotos
+            )
         }
     }
 }
