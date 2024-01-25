@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Copy_BusSchedule</string>
+    <string name="bus_schedule">Bus Schedule</string>
+    <string name="back">Back</string>
+    <string name="stop_name">Stop Name</string>
+    <string name="stop">Stop</string>
+    <string name="arrival_time">Arrival Time</string>
+</resources>
